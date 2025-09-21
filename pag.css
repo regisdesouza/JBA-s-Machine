@@ -1,0 +1,139 @@
+@import url("https://fonts.googleapis.com/css2?family=Josefin+Slab:ital,wght@0,100..700;1,100..700&display=swap");
+/* estilo para o corpo da página */
+body {
+  font-family: "Josefin Slab", serif; /* define a fonte utilizada */
+  background-image: url(./assets/600031.jpg);
+  background-size: cover;
+  background-position: auto;
+  background-repeat: no-repeat;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100vw;
+  height: 100vh;
+  margin: 0;
+  padding: 0;
+}
+
+#titulo {
+  background-color: #ffffff;
+  width: 20%;
+  height: 7%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 8px;
+  color: #000000;
+  margin: 5px;
+  padding: 2px;
+}
+/* estilo para o contêiner principal */
+#container {
+  width: 80%; /* define a largura do contêiner */
+  height: 100%;
+  background-color: #000000de;
+  border: 7px black;
+  display: flex; /* centraliza o contêiner horizontalmente */
+  flex-direction: row;
+  justify-self: center;
+  align-items: center;
+  text-align: center; /* alinha o conteúdo ao centro */
+  background-size: cover;
+}
+
+#conversor {
+  width: 50%;
+  height: 83%;
+  width: 50%;
+  height: 83%;
+  background-size: cover;
+}
+
+/* estilo para o cabeçalho */
+#container h1 {
+  color: #f7f3fa; /* define a cor do texto do cabeçalho */
+  border-radius: 10%;
+  width: 40%;
+  margin: 50px auto;
+}
+
+/* estilo para a entrada de texto */
+input[type="text"] {
+  padding: 8px; /* define o preenchimento interno */
+  font-size: 16px; /* define o tamanho da fonte */
+  border-radius: 5px; /* define o raio das bordas */
+  width: 43%;
+}
+
+#divCheckbox{
+      color: #ffffff;
+}
+/* estilo para seleção e botão */
+select,
+button {
+  padding: 8px; /* define o preenchimento interno */
+  font-size: 16px; /* define o tamanho da fonte */
+  border-radius: 5px; /* define o raio das bordas */
+  cursor: pointer; /* altera o cursor ao passar por cima */
+}
+
+/* estilo para o botão */
+button {
+  background-color: #20a4f0; /* define a cor de fundo do botão */
+  width: 20vw;
+  margin: auto;
+  color: #ffffff; /* define a cor do texto do botão */
+  border: none; /* remove a borda do botão */
+}
+
+/* estilo para o botão ao passar o mouse por cima */
+button:hover {
+  background-color: #3fa720; /* altera a cor de fundo ao passar o mouse */
+}
+
+/* estilo para a saída de resultados */
+#output {
+  position: relative; 
+  color: #ffffff;
+  width: 70%;
+  height: 30%;
+  font-size: 23px;
+  margin-top: 80px;
+  padding: 10px;
+  border-radius: 20px;
+  background: url("./assets/839179.png") no-repeat center/cover;
+  border: 2px solid black;
+  text-align: left;
+  display: none;
+  z-index: 2;
+  overflow: hidden; /* garante que o overlay não escape */
+}
+
+#output::before {
+  content: "";
+  position: absolute;
+  inset: 0; /* cobre todo o elemento */
+  background: rgba(0, 0, 0, 0.9); /* preto 50% transparente */
+  border-radius: 20px;
+  z-index: 0;
+}
+
+#output * {
+  position: relative;
+  z-index: 1; /* deixa o texto acima do overlay */
+}
+
+#calculadora {
+    width: 50%;
+    height: 83%;
+    width: 50%;
+    height: 83%;
+    background-size: cover;
+}
+
+input[type="inputNumeroUm"] {
+  padding: 8px; /* define o preenchimento interno */
+  font-size: 16px; /* define o tamanho da fonte */
+  border-radius: 5px; /* define o raio das bordas */
+  width: 43%;
+}

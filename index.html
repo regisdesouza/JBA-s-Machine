@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Conversor de Bases</title>
+    <link rel="stylesheet" href="./pag.css" />
+  </head>
+  <h1 id="titulo"><b>JOJO's Machine</b></h1>
+  <body>
+    <!-- contêiner principal -->
+    <div id="container">
+      <div id="conversor">
+        <!-- título da página -->
+        <h1><b>Conversor</b></h1>
+        <!-- entrada de valor -->
+        <input
+          id="inputValue"
+          type="text"
+          placeholder="Digite o valor para o Dio converter!"
+        />
+        <!-- seleção da base -->
+        <select id="inputBase">
+          <option value="decimal">Decimal</option>
+          <option value="hexadecimal">Hexadecimal</option>
+          <option value="octal">Octal</option>
+          <option value="binario">Binário</option>
+        </select>
+        <br /><br />
+        <!-- opções de conversão -->
+        <div id="divCheckbox">
+          <h3>Converter para:</h3>
+          <input type="checkbox" id="convertDecimal" /><label
+            for="convertDecimal"
+            ><b>Decimal</b></label
+          >
+          <input type="checkbox" id="convertHexadecimal" /><label
+            for="convertHexadecimal"
+            >Hexadecimal</label
+          >
+          <input type="checkbox" id="convertOctal" /><label for="convertOctal"
+            >Octal</label
+          >
+          <input type="checkbox" id="convertBinario" /><label
+            for="convertBinario"
+            >Binário</label
+          >
+        </div>
+        <br /><br />
+        <!-- botão de conversão -->
+        <button onclick="converter()">Converter</button>
+        <!-- saída de resultados -->
+        <div id="output"></div>
+
+    </div>
+    <!--Calculadora -->
+      <div id="calculadora">
+        <h1 id="tituloCalculadora"><b>Calculadora</b></h1>
+        insira o n1: <input id="inputNumeroUm" />
+        <select id="baseUm">
+          <option value="selecione">Selecione...</option>
+          <option value="decimal">Decimal</option>
+          <option value="hexadecimal">Hexadecimal</option>
+          <option value="octal">Octal</option>
+          <option value="binario">Binário</option>
+        </select>
+        <br />
+        insira o n2: <input id="inputNumeroDois" />
+        <select id="baseDois">
+          <option value="selecione">Selecione...</option>
+          <option value="decimal">Decimal</option>
+          <option value="hexadecimal">Hexadecimal</option>
+          <option value="octal">Octal</option>
+          <option value="binario">Binário</option>
+        </select>
+        <br />
+        Selecione a operação aritmética:
+        <select id="operacao">
+          <option value="selecione">Selecione...</option>
+          <option value="subtrair">Subtração</option>
+          <option value="adicionar">Adicionar</option>
+        </select>
+        <br />
+        <button id="botaoCalcular" onclick="calcular()">Calcular</button><br />
+        <div id="divMsg"></div>
+      </div>
+    </div>
+  </body>
+  <script src="./calculadora.js"></script>
+</html>
