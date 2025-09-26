@@ -119,7 +119,7 @@ button:hover {
 }
 
 #output * {
-  position: relative;
+  position: relative; 
   z-index: 1; /* deixa o texto acima do overlay */
 }
 

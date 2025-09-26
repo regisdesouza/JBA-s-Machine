@@ -68,3 +68,90 @@ function validarEntrada(inputValue, inputBase) {
   }
   return true; // Retorna verdadeiro indicando que a entrada é válida
 }
+
+
+
+function calcular(){
+    function somarBinario(baseUm, baseDois) {
+      var array1 = baseUm.split('').reverse();
+      var array2 = baseDois.split('').reverse();
+      var arrayMaior = array1.length > array2.length ? array1.length : array2.length;
+
+      var resultado = '';
+      var vaiUm = 0;
+
+      for (var i = 0; i < arrayMaior; i++) {
+        var valor1 = i < array1.length ? parseInt(array1[i]) : 0;
+        var valor2 = i < array2.length ? parseInt(array2[i]) : 0;
+
+        var total = valor1 + valor2 + vaiUm;
+        resultado = (total % 2) + resultado;
+        vaiUm = total >= 2 ? 1 : 0;
+      }
+
+      if (vaiUm > 0) {
+        resultado = '1' + resultado;
+      }
+
+      return resultado === "" ? '0' : resultado;
+    }
+
+    function selecionar() {
+      var inputValue = document.getElementById("inputNumeroUm").value;
+      var inputValue2 = document.getElementById("inputNumeroDois").value;
+      var inputBase = document.getElementById("baseUm").value;
+      var inputBase2 = document.getElementById("baseDois").value;
+      var operacao = document.getElementById("operacao").value;
+      var divMsg = document.getElementById("divMsg");
+
+      if (inputBase === "selecione" || inputBase2 === "selecione" || operacao === "selecione") {
+        divMsg.innerHTML = "<span style='color: red;'>Por favor, selecione todas as opções.</span>";
+        return;
+      }
+
+      if (!validarEntrada(inputValue, inputBase)) {
+        divMsg.innerHTML = "<span style='color: red;'>Por favor, insira um número válido para a base do primeiro número.</span>";
+        return;
+      }
+      if (!validarEntrada(inputValue2, inputBase2)) {
+        divMsg.innerHTML = "<span style='color: red;'>Por favor, insira um número válido para a base do segundo número.</span>";
+        return;
+      }
+
+      var num1 = parseInt(inputValue, converterBase(inputBase));
+      var num2 = parseInt(inputValue2, converterBase(inputBase2));
+
+      if (isNaN(num1) || isNaN(num2)) {
+        divMsg.innerHTML = "<span style='color: red;'>Erro na conversão dos números. Verifique as entradas.</span>";
+        return;
+      }
+
+      var resultadoDecimal;
+      if (operacao === "adicionar") {
+        resultadoDecimal = num1 + num2;
+      } else if (operacao === "subtrair") {
+        resultadoDecimal = num1 - num2;
+      } else {
+        divMsg.innerHTML = "<span style='color: red;'>Operação inválida.</span>";
+        return;
+      }
+
+      var resultadoStr;
+      switch (inputBase) {
+        case "decimal":
+          resultadoStr = resultadoDecimal.toString(10);
+          break;
+        case "hexadecimal":
+          resultadoStr = resultadoDecimal.toString(16).toUpperCase();
+          break;
+        case "octal":
+          resultadoStr = resultadoDecimal.toString(8);
+          break;
+        case "binario":
+          resultadoStr = resultadoDecimal.toString(2);
+          break;
+        default:
+          resultadoStr = resultadoDecimal.toString();
+      }
+}
+}
