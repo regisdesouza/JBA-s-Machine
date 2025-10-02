@@ -44,7 +44,7 @@ body {
 #conversor {
   width: 50%;
   height: 83%;
-  width: 50%;
+  width: 70%;
   height: 83%;
   background-size: cover;
 }
@@ -67,6 +67,9 @@ input[type="text"] {
 
 #divCheckbox{
       color: #ffffff;
+      width: 100%;
+      display: flex;
+      flex-direction: row;
 }
 /* estilo para seleção e botão */
 select,
@@ -92,7 +95,7 @@ button:hover {
 }
 
 /* estilo para a saída de resultados */
-#output {
+.output {
   position: relative; 
   color: #ffffff;
   width: 70%;
@@ -109,7 +112,7 @@ button:hover {
   overflow: hidden; /* garante que o overlay não escape */
 }
 
-#output::before {
+.output::before {
   content: "";
   position: absolute;
   inset: 0; /* cobre todo o elemento */
@@ -126,14 +129,70 @@ button:hover {
 #calculadora {
     width: 50%;
     height: 83%;
-    width: 50%;
+    width: 90%;
     height: 83%;
     background-size: cover;
 }
 
-input[type="inputNumeroUm"] {
+/* CORREÇÃO: Seletores de input corrigidos */
+input {
   padding: 8px; /* define o preenchimento interno */
   font-size: 16px; /* define o tamanho da fonte */
   border-radius: 5px; /* define o raio das bordas */
   width: 43%;
+}
+
+.msg{
+  color: #ffffff;
+  font-size: 20px;
+  margin: 12px;
+}
+
+#selecionaroperacao{
+  font-size: 23px;
+  margin: 10px;
+}
+
+#botaoCalcular{
+  margin-top: 10px;
+}
+
+/* CORREÇÃO: Estilo para a div de mensagens */
+#divMsg {
+  color: #ffffff;
+  font-size: 18px;
+  margin-top: 10px;
+  min-height: 30px;
+}
+
+/* CORREÇÃO: Estilo específico para a output da calculadora */
+#outputCalculadora {
+  position: relative; 
+  color: #ffffff;
+  width: 70%;
+  height: 30%;
+  font-size: 23px;
+  margin: 20px auto;
+  padding: 10px;
+  border-radius: 20px;
+  background: url("./assets/839179.png") no-repeat center/cover;
+  border: 2px solid black;
+  text-align: left;
+  display: none;
+  z-index: 2;
+  overflow: hidden;
+}
+
+#outputCalculadora::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.9);
+  border-radius: 20px;
+  z-index: 0;
+}
+
+#outputCalculadora * {
+  position: relative; 
+  z-index: 1;
 }

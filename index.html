@@ -6,8 +6,8 @@
     <title>Conversor de Bases</title>
     <link rel="stylesheet" href="./pag.css" />
   </head>
-  <h1 id="titulo"><b>JOJO's Machine</b></h1>
   <body>
+    <h1 id="titulo"><b>JOJO's Machine</b></h1>
     <!-- contêiner principal -->
     <div id="container">
       <div id="conversor">
@@ -56,34 +56,47 @@
     <!--Calculadora -->
       <div id="calculadora">
         <h1 id="tituloCalculadora"><b>Calculadora</b></h1>
-        insira o n1: <input id="inputNumeroUm" />
-        <select id="baseUm">
-          <option value="selecione">Selecione...</option>
-          <option value="decimal">Decimal</option>
-          <option value="hexadecimal">Hexadecimal</option>
-          <option value="octal">Octal</option>
-          <option value="binario">Binário</option>
-        </select>
-        <br />
-        insira o n2: <input id="inputNumeroDois" />
-        <select id="baseDois">
-          <option value="selecione">Selecione...</option>
-          <option value="decimal">Decimal</option>
-          <option value="hexadecimal">Hexadecimal</option>
-          <option value="octal">Octal</option>
-          <option value="binario">Binário</option>
-        </select>
-        <br />
-        Selecione a operação aritmética:
-        <select id="operacao">
-          <option value="selecione">Selecione...</option>
-          <option value="subtrair">Subtração</option>
-          <option value="adicionar">Adicionar</option>
-        </select>
-        <br />
+        <div class="msg">
+
+          Insira o primeiro num: <input id="inputNumeroUm" />
+          <select id="baseUm">
+            <option value="selecione">Selecione...</option>
+            <option value="decimal">Decimal</option>
+            <option value="hexadecimal">Hexadecimal</option>
+            <option value="octal">Octal</option>
+            <option value="binario">Binário</option>
+          </select>
+          <br />
+        </div>
+        <div class="msg">
+
+          Insira o segundo num: <input id="inputNumeroDois" />
+          <select id="baseDois">
+            <option value="selecione">Selecione...</option>
+            <option value="decimal">Decimal</option>
+            <option value="hexadecimal">Hexadecimal</option>
+            <option value="octal">Octal</option>
+            <option value="binario">Binário</option>
+          </select>
+          <br />
+        </div>
+        <div class="msg">
+          Selecione a operação aritmética:
+        <div id="selecionaroperacao">
+
+          <select id="operacao">
+            <option value="selecione">Selecione...</option>
+            <option value="subtrair">Subtração</option>
+            <option value="adicionar">Adicionar</option>
+          </select>
+          <br />
+        </div>
+        </div>
         <button id="botaoCalcular" onclick="calcular()">Calcular</button><br />
         <div id="divMsg"></div>
       </div>
+      <div id="outputCalculadora" class="output"></div>
+
     </div>
   </body>
   <script src="./calculadora.js"></script>
