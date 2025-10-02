@@ -10,14 +10,16 @@
     <h1 id="titulo"><b>JOJO's Machine</b></h1>
     <!-- contêiner principal -->
     <div id="container">
+      
       <div id="conversor">
+        <div id="dio"></div>
         <!-- título da página -->
         <h1><b>Conversor</b></h1>
         <!-- entrada de valor -->
         <input
-          id="inputValue"
-          type="text"
-          placeholder="Digite o valor para o Dio converter!"
+        id="inputValue"
+        type="text"
+        placeholder="Digite o valor para o Dio converter!"
         />
         <!-- seleção da base -->
         <select id="inputBase">
@@ -28,33 +30,37 @@
         </select>
         <br /><br />
         <!-- opções de conversão -->
-        <div id="divCheckbox">
+        <div id="divh3">
           <h3>Converter para:</h3>
+        </div>
+        
+        <div id="divCheckbox">
           <input type="checkbox" id="convertDecimal" /><label
-            for="convertDecimal"
-            ><b>Decimal</b></label
+          for="convertDecimal"
+          ><b>Decimal</b></label
           >
           <input type="checkbox" id="convertHexadecimal" /><label
-            for="convertHexadecimal"
-            >Hexadecimal</label
+          for="convertHexadecimal"
+          >Hexadecimal</label
           >
           <input type="checkbox" id="convertOctal" /><label for="convertOctal"
-            >Octal</label
+          >Octal</label
           >
           <input type="checkbox" id="convertBinario" /><label
-            for="convertBinario"
-            >Binário</label
+          for="convertBinario"
+          >Binário</label
           >
         </div>
         <br /><br />
         <!-- botão de conversão -->
         <button onclick="converter()">Converter</button>
         <!-- saída de resultados -->
-        <div id="output"></div>
-
-    </div>
-    <!--Calculadora -->
+        <div id="output" ></div>
+        
+      </div>
+      <!--Calculadora -->
       <div id="calculadora">
+        <div id="jotaro"></div>
         <h1 id="tituloCalculadora"><b>Calculadora</b></h1>
         <div class="msg">
 
@@ -94,8 +100,8 @@
         </div>
         <button id="botaoCalcular" onclick="calcular()">Calcular</button><br />
         <div id="divMsg"></div>
+        <div id="outputCalculadora" class="output"></div>
       </div>
-      <div id="outputCalculadora" class="output"></div>
 
     </div>
   </body>

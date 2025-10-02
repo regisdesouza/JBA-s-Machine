@@ -43,9 +43,7 @@ body {
 
 #conversor {
   width: 50%;
-  height: 83%;
-  width: 70%;
-  height: 83%;
+  height: 700px;
   background-size: cover;
 }
 
@@ -67,7 +65,7 @@ input[type="text"] {
 
 #divCheckbox{
       color: #ffffff;
-      width: 100%;
+      width: 95%;
       display: flex;
       flex-direction: row;
 }
@@ -125,12 +123,38 @@ button:hover {
   position: relative; 
   z-index: 1; /* deixa o texto acima do overlay */
 }
-
+#output {
+  position: relative; 
+  color: #ffffff;
+  width: 70%;
+  height: 30%;
+  font-size: 23px;
+  margin-top: 80px;
+  padding: 10px;
+  border-radius: 20px;
+  background: url("./assets/839179.png") no-repeat center/cover;
+  border: 2px solid black;
+  text-align: left;
+  display: none;
+  z-index: 2;
+  overflow: hidden; /* garante que o overlay não escape */
+}
+#output::before {
+  content: "";
+  position: absolute;
+  inset: 0; /* cobre todo o elemento */
+  background: rgba(0, 0, 0, 0.9); /* preto 50% transparente */
+  border-radius: 20px;
+  z-index: 0;
+}
+#output * {
+  position: relative; 
+  z-index: 1; /* deixa o texto acima do overlay */
+}
 #calculadora {
     width: 50%;
-    height: 83%;
-    width: 90%;
-    height: 83%;
+    height: 700px;
+
     background-size: cover;
 }
 
@@ -175,7 +199,7 @@ input {
   margin: 20px auto;
   padding: 10px;
   border-radius: 20px;
-  background: url("./assets/839179.png") no-repeat center/cover;
+  background: url("./assets/775940.png") no-repeat center/cover;
   border: 2px solid black;
   text-align: left;
   display: none;
@@ -195,4 +219,30 @@ input {
 #outputCalculadora * {
   position: relative; 
   z-index: 1;
+}
+
+#divh3 {
+  color: #ffffff;
+    font-size: 18px;
+  margin-top: 10px;
+  min-height: 30px;
+}
+
+#dio{
+background-image: url(./assets/dio-standing.gif);
+background-repeat: no-repeat;
+
+width: 155px;
+height: 115px;
+
+}
+
+#jotaro{
+  background-image: url(./assets/jotaro-jj.gif);
+background-repeat: no-repeat;
+   width: 155px;
+  height: 115px;
+ transform: scaleX(-1);
+ display: flex;
+ flex-direction: row-reverse;
 }
